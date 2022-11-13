@@ -356,6 +356,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   onTap: () async {
                                     if (_formKey.currentState!.validate()) {
                                       _formKey.currentState!.save();
+                                      verificationIdCon = "";
                                       bool check;
                                       check = await _signUpController
                                           .signUpWithEmailAndPassword(
@@ -374,7 +375,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                         );
 
                                         // phone verification
-                                        bool phoneCheck;
+                                        bool phoneCheck = false;
 
                                         phoneCheck = await _signUpController
                                             .phoneVerificationFirebase(

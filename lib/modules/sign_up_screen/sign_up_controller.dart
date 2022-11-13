@@ -131,7 +131,9 @@ class SignUpController extends GetxController {
           ).show(context);
         },
         codeSent: (String verificationId, int? resendToken) {
-          SignUpScreen.verify = verificationId;
+          verificationIdCon = verificationId;
+          print("verifiyId from login in Screen $verificationId");
+          print("verifiyId from login in Screen Token $resendToken");
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );

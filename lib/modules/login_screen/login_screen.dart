@@ -288,6 +288,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             if (_formKey.currentState!.validate()) {
                               _formKey.currentState!.save();
 
+                              verificationIdCon = "";
+
                               bool check = false;
                               check = await _loginController
                                   .loginWithEmailAndPassword(
@@ -335,12 +337,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: SizeConfig.screenHeight * 0.02),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => LottieAnimation(),
-                              ),
-                            );
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) => LottieAnimation(),
+                            //   ),
+                            // );
                           },
                           child: Text(
                             locale.forgotPassword,

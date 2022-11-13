@@ -37,6 +37,8 @@ const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
+String verificationIdCon = "";
+
 ///
 const String googleAPIKey = "AIzaSyAiPQF2KnUfZpG4DOaoM9j2ouAAWd597oQ";
 

@@ -148,8 +148,9 @@ class LoginController extends GetxController {
           ).show(context);
         },
         codeSent: (String verificationId, int? resendToken) {
-          LoginScreen.verify = verificationId;
+          verificationIdCon = verificationId;
           print("verifiyId from login in Screen $verificationId");
+          print("verifiyId from login in Screen token $resendToken");
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );

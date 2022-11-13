@@ -17,12 +17,12 @@ class OtpController extends GetxController {
     try {
       // Create a PhoneAuthCredential with the code
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: verify,
+        verificationId: verificationIdCon,
         smsCode: code,
       );
 
-      print(verify + "verify");
-      print(code + "code");
+      print(verify + " verify");
+      print(code + " code");
 
       // Sign the user in (or link) with the credential
       await auth.signInWithCredential(credential);
