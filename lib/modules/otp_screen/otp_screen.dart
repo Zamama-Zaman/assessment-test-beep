@@ -2,13 +2,10 @@
 
 import 'package:assessment_test_beep/constants.dart';
 import 'package:assessment_test_beep/modules/default_screen/default_screen.dart';
-import 'package:assessment_test_beep/modules/login_screen/login_screen.dart';
 import 'package:assessment_test_beep/modules/otp_screen/otp_controller.dart';
-import 'package:assessment_test_beep/modules/sign_up_screen/sign_up_screen.dart';
 import 'package:assessment_test_beep/provider/local.dart';
 import 'package:assessment_test_beep/widgets/custom_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
@@ -207,9 +204,7 @@ class _OTPScreenState extends State<OTPScreen> {
                     onChanged: (val) {
                       code = val;
                     },
-                    onCompleted: (val) {
-                      print(val);
-                    },
+                    onCompleted: (val) {},
                   ),
                 ),
               ),

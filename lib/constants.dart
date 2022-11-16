@@ -1,3 +1,4 @@
+import 'package:assessment_test_beep/globel_models/recharege_model.dart';
 import 'package:flutter/material.dart';
 
 import 'globel_models/user_model.dart';
@@ -18,6 +19,9 @@ class Constants {
   static const Color kLightGreenColor = Color(0xFFCFF0DD);
 
   static const Color kDarkGreenShadeColor = Color(0xFF113544);
+
+  // Bottom Naviagtion Bar
+  static const Color kUnselectedColor = Color(0xFF9997FC);
 }
 
 //* Form Error
@@ -36,16 +40,22 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+const String kAmountNullError = "Please Enter Your amount";
 
 String verificationIdCon = "";
+Map data = {};
 
 ///
 const String googleAPIKey = "AIzaSyAiPQF2KnUfZpG4DOaoM9j2ouAAWd597oQ";
 
-/// Access user in any layer of project
+/// Access in any layer of project
 UserModel userGlobal = UserModel();
+RechargeModel rechargeModel = const RechargeModel(currentAmount: 0.0);
 
 /// same name of every collection
 class FirebaseConst {
   static const String users = "Users";
 }
+
+/// Api Key for payment
+const String tapPaymentsapiKey = "sk_test_XKokBfNWv6FIYuTMg5sLPjhJ";

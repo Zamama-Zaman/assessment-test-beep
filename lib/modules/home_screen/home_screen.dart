@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:assessment_test_beep/constants.dart';
-import 'package:assessment_test_beep/modules/car_screen/car_screen.dart';
 import 'package:assessment_test_beep/modules/home_screen/home_controller.dart';
 import 'package:assessment_test_beep/modules/recharge_screen/recharge_screen.dart';
 import 'package:assessment_test_beep/provider/local.dart';
@@ -135,7 +134,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 MaterialPageRoute(
                                   builder: (context) => RechargeScreen(),
                                 ),
-                              );
+                              ).then((value) {
+                                setState(() {});
+                              });
                             },
                             child: Container(
                               width: getProportionateScreenWidth(118),
@@ -152,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Row(
                                     children: [
                                       Text(
-                                        '1284',
+                                        '${rechargeModel.currentAmount} ',
                                         style: TextStyle(
                                           color: Constants.kWhiteColor,
                                           fontSize:

@@ -2,11 +2,10 @@
 
 import 'package:assessment_test_beep/constants.dart';
 import 'package:assessment_test_beep/globel_models/user_model.dart';
+import 'package:assessment_test_beep/modules/default_screen/default_screen.dart';
 import 'package:assessment_test_beep/modules/login_screen/login_controller.dart';
-import 'package:assessment_test_beep/modules/login_screen/lottie_animation.dart';
 import 'package:assessment_test_beep/modules/otp_screen/otp_screen.dart';
 import 'package:assessment_test_beep/modules/sign_up_screen/sign_up_screen.dart';
-import 'package:assessment_test_beep/provider/local.dart';
 import 'package:assessment_test_beep/widgets/custom_button.dart';
 import 'package:assessment_test_beep/widgets/custom_email_field.dart';
 import 'package:assessment_test_beep/widgets/custom_password_field.dart';
@@ -17,7 +16,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 import 'package:image_sequence_animator/image_sequence_animator.dart';
-import 'package:provider/provider.dart';
 
 import '../../size_config.dart';
 
@@ -102,7 +100,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
       for (int i = 0; i < 54; i++) {
         String _value = i.toString();
-        while (_value.length < 5) _value = "0" + _value;
+        while (_value.length < 5) {
+          _value = "0" + _value;
+        }
         _fullPathsOffline!.add("assets/gif/car_fram_images" + _value + ".gif");
       }
     }
@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
 
                         //* /// main image
-                        Container(
+                        SizedBox(
                           height: getProportionateScreenHeight(400),
                           child: Stack(
                             children: [
@@ -337,12 +337,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(height: SizeConfig.screenHeight * 0.02),
                         InkWell(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => LottieAnimation(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DefaultScreen(),
+                              ),
+                            );
                           },
                           child: Text(
                             locale.forgotPassword,

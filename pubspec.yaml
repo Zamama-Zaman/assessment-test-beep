@@ -77,6 +77,12 @@ dependencies:
   # toaster
   motion_toast: ^2.1.0
 
+  #tap payment
+  flutter_tap_payment: ^0.0.4
+  
+  # Icon animation
+  animated_icon_button: ^1.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

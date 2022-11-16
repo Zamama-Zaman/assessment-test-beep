@@ -1,3 +1,4 @@
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:geocoder/geocoder.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
@@ -59,7 +60,7 @@ class HomeController extends GetxController {
     var address = await Geocoder.local.findAddressesFromCoordinates(
       Coordinates(_getCurrentPosition.latitude, _getCurrentPosition.longitude),
     );
-    cityName = address[0].locality.obs;
+    cityName.value = address[0].locality;
   }
 
   //* Asking permission to user and assiging pin location in (_getCurrentPosition) variable

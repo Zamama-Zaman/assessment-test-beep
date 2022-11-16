@@ -3,7 +3,6 @@
 import 'dart:io';
 
 import 'package:assessment_test_beep/globel_models/user_model.dart';
-import 'package:assessment_test_beep/modules/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -27,6 +26,7 @@ class LoginController extends GetxController {
         email: email,
         password: password,
       );
+      // ignore: unnecessary_null_comparison
       if (_user != null) {
         userGlobal = UserModel(
           email: email,
@@ -149,8 +149,6 @@ class LoginController extends GetxController {
         },
         codeSent: (String verificationId, int? resendToken) {
           verificationIdCon = verificationId;
-          print("verifiyId from login in Screen $verificationId");
-          print("verifiyId from login in Screen token $resendToken");
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );

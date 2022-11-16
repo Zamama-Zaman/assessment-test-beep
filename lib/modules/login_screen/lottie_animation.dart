@@ -46,7 +46,9 @@ class _LottieAnimationState extends State<LottieAnimation> {
 
       for (int i = 0; i < 54; i++) {
         String _value = i.toString();
-        while (_value.length < 5) _value = "0" + _value;
+        while (_value.length < 5) {
+          _value = "0" + _value;
+        }
         _fullPathsOffline!.add("assets/gif/car_fram_images" + _value + ".gif");
       }
     }
@@ -55,7 +57,7 @@ class _LottieAnimationState extends State<LottieAnimation> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             height: getProportionateScreenHeight(400),
             child: Stack(
               children: [

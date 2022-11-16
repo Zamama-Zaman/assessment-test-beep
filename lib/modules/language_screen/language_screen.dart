@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'dart:isolate';
-
 import 'package:assessment_test_beep/constants.dart';
 import 'package:assessment_test_beep/modules/login_screen/login_screen.dart';
 import 'package:assessment_test_beep/provider/local.dart';
@@ -144,10 +142,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                             listen: false,
                           );
                           provider.setLocale(Locale('ar'));
-
-                          Size size = MediaQuery.of(context).size;
-                          print(size.width);
-                          print(size.height);
                         },
                         child: Stack(
                           textDirection: TextDirection.ltr,

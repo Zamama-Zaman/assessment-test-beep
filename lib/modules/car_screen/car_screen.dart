@@ -97,6 +97,7 @@ class _CarScreenState extends State<CarScreen> {
                                   ],
                                 ),
                               ),
+                              SizedBox(height: SizeConfig.screenHeight * 0.15),
                             ],
                           ),
                         ),

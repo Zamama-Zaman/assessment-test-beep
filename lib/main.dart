@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:assessment_test_beep/all_controller_binding.dart';
 import 'package:assessment_test_beep/constants.dart';
 import 'package:assessment_test_beep/modules/language_screen/language_screen.dart';
 import 'package:assessment_test_beep/modules/login_screen/login_controller.dart';
-import 'package:assessment_test_beep/modules/splash_screen/splash_screen.dart';
 import 'package:assessment_test_beep/provider/local.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

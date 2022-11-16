@@ -38,12 +38,12 @@ class CarController extends GetxController {
         products.value = productSet.toList();
         isProductFetched.value = false;
       } else {
-        print(response.reasonPhrase);
+        // print(response.reasonPhrase);
         isProductFetched.value = false;
       }
     } catch (e) {
       isProductFetched.value = false;
-      print(e);
+      // print(e);
     }
   }
 }

@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:assessment_test_beep/modules/login_screen/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -20,12 +19,9 @@ class OtpController extends GetxController {
         verificationId: verificationIdCon,
         smsCode: code,
       );
-
-      print(verify + " verify");
-      print(code + " code");
-
       // Sign the user in (or link) with the credential
       await auth.signInWithCredential(credential);
+      // ignore: unnecessary_null_comparison
       if (auth.currentUser!.uid == null) {
         return false;
       } else {

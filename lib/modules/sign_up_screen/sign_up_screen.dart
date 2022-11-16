@@ -1,10 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:assessment_test_beep/constants.dart';
-import 'package:assessment_test_beep/modules/home_screen/home_screen.dart';
 import 'package:assessment_test_beep/modules/otp_screen/otp_screen.dart';
 import 'package:assessment_test_beep/modules/sign_up_screen/sign_up_controller.dart';
-import 'package:assessment_test_beep/provider/local.dart';
 import 'package:assessment_test_beep/size_config.dart';
 import 'package:assessment_test_beep/widgets/custom_button.dart';
 import 'package:assessment_test_beep/widgets/custom_email_field.dart';
@@ -16,7 +14,6 @@ import 'package:assessment_test_beep/widgets/loading_indicator_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
